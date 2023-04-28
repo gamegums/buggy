@@ -1,5 +1,5 @@
 const CLIENT_ID = '1087415975466516580';
-const REDIRECT_URI = 'file://C:/Users/petar/OneDrive/Desktop/Fire%20Bot/website/index.html#';
+const REDIRECT_URI = 'https://gamegums.github.io/fireBot';
 const SCOPE = 'identify email';
 const DISCORD_API_BASE = 'https://discord.com/api';
 
