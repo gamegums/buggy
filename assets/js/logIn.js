@@ -27,8 +27,8 @@ async function exchangeCodeForToken(code) {
     redirect_uri: REDIRECT_URI,
     scope: SCOPE
   };
-  return `Error!`;
-  const response = fetch(`${DISCORD_API_BASE}/oauth2/token`, {
+  
+  const response = await fetch(`${DISCORD_API_BASE}/oauth2/token`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded'
