@@ -37,8 +37,8 @@ async function exchangeCodeForToken(code) {
   });
 
   console.log(response)
-  console.log(response.json())
   console.log(JSON.parse(response))
+  console.log(response.json())
 
   const json = response.json();
   return json;
