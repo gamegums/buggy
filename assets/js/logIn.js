@@ -36,6 +36,8 @@ async function exchangeCodeForToken(code) {
     body: new URLSearchParams(data)
   });
 
+  console.log(response)
+
   const json = response.json();
   return json;
 }
