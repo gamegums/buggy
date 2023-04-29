@@ -70,6 +70,8 @@ async function handleDiscordCallback() {
 
   console.log(`Logged in as ${userData.username}#${userData.discriminator}`);
   console.log(`Email: ${userData.email}`);
+
+  console.log(userData)
 }
 
 // Example usage: add an event listener to a button to trigger the login flow
