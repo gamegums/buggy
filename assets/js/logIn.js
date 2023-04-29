@@ -52,7 +52,7 @@ async function getUserData(token) {
     }
   });
 
-  const json = response.json();
+  const json = await response.json();
   return json;
 }
 
