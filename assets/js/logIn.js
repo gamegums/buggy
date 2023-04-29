@@ -42,7 +42,7 @@ async function exchangeCodeForToken(code) {
 
 // Function to get user data using the access token
 async function getUserData(token) {
-  const response = fetch(`${DISCORD_API_BASE}/users/@me`, {
+  const response = await fetch(`${DISCORD_API_BASE}/users/@me`, {
     headers: {
       'Authorization': `Bearer ${token}`
     }
