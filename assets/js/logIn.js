@@ -40,7 +40,7 @@ async function exchangeCodeForToken(code) {
   console.log(JSON.parse(response))
   console.log(response.json())
 
-  const json = response.json();
+  const json = await response.json();
   return json;
 }
 
@@ -69,8 +69,8 @@ async function handleDiscordCallback() {
 
   localStorage.removeItem('discord-oauth2-state');
 
-  const tokenData = exchangeCodeForToken(code);
-  const userData = getUserData(tokenData.access_token);
+  const tokenData = await exchangeCodeForToken(code);
+  const userData = await getUserData(tokenData.access_token);
 
   console.log(`Logged in as ${userData.username}#${userData.discriminator}`);
   console.log(`Email: ${userData.email}`);
