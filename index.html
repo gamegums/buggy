@@ -14,60 +14,74 @@
     <script src="assets/js/jquery-3.6.0.js"></script>
   </head>
   <body>
-    <a id="backtotop" data-tippy-content="Back To Top.">
+    <a id="backtotop" data-tippy-content="Back To Top">
       <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
     </a>
 
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" >
-      <div class="navbar-brand mt-2 mb-2">
         <a class="navbar-item" href="#">
-          <img src="assets/img/logo.png" width="28" height="28"/>
+            <strong>FIRE BOT</strong>
         </a>
 
-        <a role="button" class="navbar-burger has-text-white" data-target="navMenu" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
+        <div class="navbar-menu">
+            <div class="navbar-start">
+            <a href="#" class="navbar-item is-tab">
+                Home
+            </a>
 
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a href="#" class="navbar-item is-tab">
-            Home
-          </a>
+            <a href="#features" class="navbar-item is-tab">
+                Features
+            </a>
 
-          <a href="#features" class="navbar-item is-tab">
-            Features
-          </a>
-
-          <a href="#stats" class="navbar-item is-tab">
-            Stats
-          </a>
-        </div>
-
-        <div class="navbar-end">
-          <a href="https://discord.gg/JcUNccQyX5" class="navbar-item is-tab" target="_blank">
-            <i class="fa-brands fa-discord"></i>
-          </a>
-
-          <a href="https://twitter.com/gamegums" class="navbar-item is-tab" target="_blank">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-
-          <a href="https://instagram.com/gamegums" class="navbar-item is-tab" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-
-          <div class="navbar-item">
-            <div class="buttons">
-              <a href="#" class="button is-blurple" id="logInButt">
-                <strong><i class="fa-solid fa-right-to-bracket mr-2"></i>Login</strong>
-              </a>
+            <a href="#stats" class="navbar-item is-tab">
+                Stats
+            </a>
             </div>
-          </div>
+
+            <div class="navbar-end">
+            <a href="https://discord.gg/JcUNccQyX5" class="navbar-item is-tab" target="_blank">
+                <i class="fa-brands fa-discord"></i>
+            </a>
+
+            <a href="https://twitter.com/gamegums" class="navbar-item is-tab" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+
+            <a href="https://instagram.com/gamegums" class="navbar-item is-tab" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <div class="dropdown navbar-item" id="userSelector">
+                <!--<div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" onclick="userSelection()">
+                        <figure class="image is-square is-16x16">
+                            <img class="is-rounded" src="https://cdn.discordapp.com/avatars/914805631817506856/8b1e1b4d02ade691952ed94e36f4e1b0.png">
+                        </figure>
+                        <span>CryptoMiner#1234</span>
+                        <span class="icon is-small">
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </div>-->
+
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">
+                            Dashboard
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-item">
+                <div class="buttons">
+                <a href="#" class="button is-blurple" id="logInButt">
+                    <strong><i class="fa-solid fa-right-to-bracket mr-2"></i>Login</strong>
+                </a>
+                </div>
+            </div>
+            </div>
         </div>
-      </div>
     </nav>
 
     <section class="hero bg-base is-fullheight">
@@ -82,11 +96,11 @@
                 Introducing Fire Bot - the ultimate Discord bot that brings Roblox features, premium perks, and a lot of fun to your server!
               </p>
               <div class="buttons">
-                <a href="https://discord.com/api/oauth2/authorize?client_id=918493911029268552&permissions=1375866055927&scope=bot" class="button is-info">
+                <a target="_blank" href="https://discord.com/api/oauth2/authorize?client_id=918493911029268552&permissions=1375866055927&scope=bot" class="button is-info">
                   <strong>Add To Discord</strong>
                 </a>
 
-                <a href="#" class="button is-primary is-outlined">
+                <a href="#premium" class="button is-primary is-outlined">
                   <strong><i class="fa-solid fa-crown"></i> Premium</strong>
                 </a>
               </div>
@@ -197,6 +211,33 @@
       </div>
     </section>
 
+    <section id="premium" class="section mt-6">
+        <div class="has-text-centered">
+          <h1 class="title lined">Premium</h1>
+          <div class="line line-center blurple"></div>
+        </div>
+  
+        <div class="columns mt-6">
+            <div class="column has-text-centered">
+                <i class="fa-solid fa-door-open title"></i>
+                <p class="title has-text-weight-bold lined">Welcome channel</p>
+                <span class="subtitle has-text-weight-bold blurple">The bot will send messages to the channel whenever someone joins the server.</span>
+            </div>
+    
+            <div class="column has-text-centered">
+                <i class="fa-solid fa-book title"></i>
+                <p class="title has-text-weight-bold lined">Rules embed</p>
+                <span class="subtitle has-text-weight-bold blurple">The bot will send nice embed of rules to channel you make request.</span>
+            </div>
+    
+            <div class="column has-text-centered">
+                <i class="fa-solid fa-ticket title"></i>
+                <p class="title has-text-weight-bold lined">Ticket system</p>
+                <span class="subtitle has-text-weight-bold blurple">Allow your members to open a ticket in your server, where they can contact you or your support team.</span>
+            </div>
+        </div>
+      </section>
+
     <section id="stats" class="section mt-6">
       <div class="has-text-centered">
         <h1 class="title lined">Stats</h1>
@@ -230,7 +271,7 @@
           <p class="subtitle mt-3 has-text-gray">
             In short, Fire Bot is the ultimate Discord bot for anyone who loves Roblox, wants premium perks and values a good sense of humor. So why not add Fire Bot to your server today and see what all the fuss is about?
           </p>
-          <a href="#" class="button is-blurple is-medium"><strong><i class="fa-solid fa-book"></i> Get Started</strong></a>
+          <a target="_blank" href="https://discord.com/api/oauth2/authorize?client_id=918493911029268552&permissions=1375866055927&scope=bot" class="button is-blurple is-medium"><strong><i class="fa-solid fa-book"></i> Get Started</strong></a>
         </div>
 
         <div class="column"></div>
@@ -267,5 +308,6 @@
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/logIn.js"></script>
+    <script src="assets/js/navbar.js"></script>
   </body>
 </html>

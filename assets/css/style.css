@@ -71,6 +71,10 @@ body {
   animation: navAnimOpen 0.2s ease-in-out;
 }
 
+section {
+    padding-top: 70px!important;
+}
+
 @keyframes navAnimOpen {
   0% {
     display: none;
